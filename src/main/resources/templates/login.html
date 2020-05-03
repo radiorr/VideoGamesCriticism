@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>VideoGamesCriticism</title>
+		<link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/login_box.css" rel="stylesheet" />
+		<link href="/style2.css" rel="stylesheet" />
+		<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+		<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="/jquery.cookie.js"></script>
+		<script src="/login.js"></script>
+	</head>
+	<body lang="zh">
+		<!-- 云彩飘动开始 -->
+		<div id="bgc">
+			<div class="cloud1">
+				<img src="/cloud01.png" />
+			</div>
+			<div class="cloud2">
+				<img src="/cloud02.png" />
+			</div>
+			<div class="cloud3">
+				<img src="/cloud01.png" />
+			</div>
+			<div class="cloud4">
+				<img src="/cloud02.png" />
+			</div>
+		</div>
+		<!-- 云彩飘动结束 -->
+
+
+		<!-- body开始 -->
+		<div class="container loginbox">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="row clearfix">
+						<div class="col-md-4 column"></div>
+						<!-- 首页图标 -->
+						<div class="col-md-4 column blackbgtop">
+							<div class="logo-img-box">
+								<a href="/"><img class="img-responsive" src="/logo.png" alt="VGC" title="VGC" /></a>
+							</div>
+						</div>
+						<div class="col-md-4 column"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgmd">
+					<div class="row clearfix">
+						<!-- 首页提名 -->
+						<div class="col-md-12 column">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 column"></div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgmd">
+					<!-- 登录 -->
+					<form role="form" class="loginform">
+						<div class="form-group">
+							<label for="tnumber">账号</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-user" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="text" name="tnumber" class="form-control" id="tnumber" placeholder="请输入账号" autocomplete="off" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="tpassword">密码</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-key" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="password" name="tpassword" class="form-control" id="tpassword" placeholder="请输入密码" autocomplete="off" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group mb-3">
+								<label for="tpassword">滑动验证</label>
+								<div id="box" class="input-group mb-3" onselectstart="return false;">
+									<div class="bgColor"></div>
+									<div class="txt"></div>
+									<div class="slider">
+										<span class="icon-arrow-right2" aria-hidden="true"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="check-box">
+							<label><input type="checkbox" name="check" class="remember" />记住我</label> <label class="text-danger">
+								<b class="errbox"></b>
+							</label> <label class="text-success"> <b class="rightbox"></b>
+							</label>
+						</div>
+						<div class="but-up ">
+							<button type="button" disabled="disabled" class="btn btn-primary logincheck">
+								<span>登录</span>
+								<div class='sp-wave'></div>
+							</button>
+							<div>
+								<button type="button" class="btn btn-info reg">
+									<span>注册</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 column"></div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgfoot">
+					<p class="copyright">Copyright © 2020 VideoGamesCriticism</p>
+				</div>
+				<div class="col-md-4 column"></div>
+			</div>
+		</div>
+
+
+		<div class="container regbox">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="row clearfix">
+						<div class="col-md-4 column"></div>
+						<!-- 首页图标 -->
+						<div class="col-md-4 column blackbgtop">
+							<div class="logo-img-box">
+								<a href="/"><img class="img-responsive" src="/logo.png" alt="VGC" title="VGC" /></a>
+							</div>
+						</div>
+						<div class="col-md-4 column"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgmd">
+					<div class="row clearfix">
+						<!-- 首页提名 -->
+						<div class="col-md-12 column">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 column"></div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgmd">
+					<!-- 注册 -->
+					<form role="form" class="loginform">
+
+						<div class="form-group">
+							<label for="rnumber">账号</label><label for="rnumber" class="rtext">
+
+							</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-user" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="text" name="rnumber" class="form-control" id="rnumber" placeholder="请输入账号" autocomplete="off" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nickname">昵称</label><label for="nickname" class="rtext">
+
+							</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-pencil" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="text" name="nickname" class="form-control" id="nickname" placeholder="请输入昵称" autocomplete="off" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="rpassword">密码</label><label for="rpassword" class="rtext">
+							</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-key" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="password" name="rpassword" class="form-control" id="rpassword" placeholder="请输入密码" autocomplete="off" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="rpassword2">确认密码</label><label for="rpassword2" class="rtext">
+								<p></p>
+							</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"> <span class="icon-key" aria-hidden="true"></span>
+									</span>
+								</div>
+								<input type="password" name="rpassword2" class="form-control" id="rpassword2" placeholder="请再次输入密码"
+								 autocomplete="off" />
+							</div>
+						</div>
+						<div class="check-box">
+							<label><input type="checkbox" name="check" class="ragree" />接受<a data-toggle="modal" data-target="#myModal">《用户协议》</a></label>
+							<label class="text-danger"> <b class="rerrbox"></b>
+							</label> <label class="text-success"> <b class="rightbox"></b>
+							</label>
+						</div>
+						<div class="but-up ">
+							<button type="button" class="btn btn-primary regcheck">
+								<span>注册并登录</span>
+							</button>
+							<div>
+								<button type="button" class="btn btn-info reg">
+									<span>取消</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 column">
+					<div class="checktext rnumber">
+						<p>账号第一个字符必须为字母，最小长度9位,最大长度15位</p>
+					</div>
+					<div class="checktext nickname">
+						<p>昵称最小长度1个字符,最大长度15个字符</p>
+					</div>
+					<div class="checktext rpassword">
+						<p>密码第一个字符必须为字母，最小长度9位,最大长度15位</p>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column"></div>
+				<div class="col-md-4 column blackbgfoot">
+					<p class="copyright">Copyright © 2020 VideoGamesCriticism</p>
+				</div>
+				<div class="col-md-4 column"></div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel"></h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						这是一些示例文本。这是一些示例文本。这是一些示例文本这是一些示例文本。这是一些示例文本。
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closereg" data-dismiss="modal">关闭</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+
+
+
+	</body>
+</html>

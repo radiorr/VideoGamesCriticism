@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title th:text="${game.Game_zname}"></title>
+		<link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/table.css" rel="stylesheet" />
+		<link href="/index.css" rel="stylesheet" />
+		<link href="/style2.css" rel="stylesheet" />
+		<link href="/gameinfo.css" rel="stylesheet" />
+		<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+		<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="/jquery.cookie.js"></script>
+		<script src="/gameinfo.js"></script>
+		<script src="/convgc.js"></script>
+
+	</head>
+	<body>
+
+		<div class="gm">
+			<div id="gleft">
+				<div id="gd1">
+					<div th:style="'width:250px; height:355px; background:transparent url(' + @{'/'+${game.Game_pic_url}} + ') 0 0 no-repeat;'"></div>
+					<!-- <img th:src="@{'/'+${game.Game_pic_url}}" class="img-responsive"> -->
+				</div>
+			</div>
+			<div id="gd2">
+				<h1 id="gn" th:text="${game.Game_zname}"></h1>
+				<h1 id="gj" th:text="${game.Game_ename}"></h1>
+			</div>
+			<div id="gright">
+				<div class="mbt5">
+
+					<div class="f20 fb" style="margin-top:5px;margin-bottom:15px;margin-left: 50px;">游戏评分</div>
+					<div class="center-block" style="width: 84px;height: 84px;background: #363636;border: 4px solid #000000;margin-top: 6px;margin-left: 30px;">
+						<div class="text-center" style=" height: 80px; line-height: 80px;  font-size: 40px; font-weight: bold;" th:text="${game.game_grade}">N/A</div>
+					</div>
+					<div></div>
+
+				</div>
+			</div>
+			<div id="gmid">
+				<div id="gd3">
+					<div id="gdc">
+						<span class="halp" title="角色扮演游戏">
+							<div class="cs ct2" onclick=" " th:text="${game.Game_group}"></div>
+						</span>
+					</div>
+					<div id="gdd">
+						<table style="margin-left: 30px;">
+							<tbody>
+								<tr>
+									<td class="gdt1">首发日:</td>
+									<td class="gdt2" th:text="${game.Game_date}"></td>
+								</tr>
+								<tr>
+									<td class="gdt1">平台:</td>
+									<td class="gdt2" th:text="${game.Game_terrace}"></td>
+								</tr>
+								<tr>
+									<td class="gdt1">类型:</td>
+									<td class="gdt2" th:text="${game.Game_group}"></td>
+								</tr>
+								<tr>
+									<td class="gdt1">评分人数:</td>
+									<td class="gdt2" id="favcount" th:text="${game.Connum}">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="gd4">
+					<div id="gamesynopsis">
+						<h2>游戏简介</h2>
+						<div class="synopsistext" th:text="${game.Game_info}">
+	
+						</div>
+					</div>
+					<div id="tagmenu_act" style="display:none"></div>
+					<div id="gwrd"><img id="waitroller" src="https://exhentai.org/img/roller.gif" style="visibility:hidden"></div>
+				</div>
+				<div class="c"></div>
+			</div>
+			<div class="c"></div>
+		</div>
+
+		<div class="gdt">
+
+			<div class="game_page_autocollapse_ctn">
+				<div class="game_page_autocollapse" style="max-height: none;">
+					<div id="game_area_description" class="game_area_description">
+						<h2>关于这款游戏</h2>
+						邪王放出的魔物大军们威胁着世界的安危，为了与它抗衡，生活在另一维度世界中的神：龙，决定赋予龙人以力量。<br><br>伊莫斯和他的妹妹朶莉住在一个不起眼的小村庄里，两人一起经营着一家药店。除了妹妹，伊莫斯身边还有青梅竹马的玩伴龙人洛蒂亚，温柔的学者克里米娜，还有假小子公主爱娜。<br><br>忽然有一天，所有龙人包括洛蒂亚接到命令，他们需集所有人力量追捕邪王，至此伊莫斯平静的生活一去不复返。<br><br><strong>
+							<h2 class="bb_tag">游戏特色</h2>
+						</strong><br>
+						<ul class="bb_ul">
+							<li>经典RPG游戏体验<br></li>
+							<li>回合制战斗<br></li>
+							<li>有难度加倍的困难模式<br></li>
+							<li>多重结局</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="game_page_autocollapse_ctn">
+				<div class="game_page_autocollapse sys_req" style="max-height: none;">
+					<h2>系统需求</h2>
+					<div class="sysreq_contents">
+						<div class="game_area_sys_req sysreq_content active" data-os="win">
+							<div class="game_area_sys_req_leftCol">
+								<ul>
+									<strong>最低配置:</strong><br>
+									<ul class="bb_ul">
+										<li><strong>操作系统:</strong> Windows® 7/8/8.1/10<br></li>
+										<li><strong>处理器:</strong> Intel Core2 Duo or better<br></li>
+										<li><strong>内存:</strong> 4 GB RAM<br></li>
+										<li><strong>显卡:</strong> DirectX 9/OpenGL 4.1 capable GPU<br></li>
+										<li><strong>DirectX 版本:</strong> 9.0<br></li>
+										<li><strong>存储空间:</strong> 需要 2 GB 可用空间<br></li>
+										<li><strong>附注事项:</strong> 1280x768 or better Display. Lag may occur from loading menus or maps. Turn off
+											other programs before running the game.</li>
+									</ul>
+								</ul>
+							</div>
+							<div class="game_area_sys_req_rightCol">
+								<ul>
+									<strong>推荐配置:</strong><br>
+									<ul class="bb_ul">
+										<li><strong>操作系统:</strong> Windows® 7/8/8.1/10<br></li>
+										<li><strong>处理器:</strong> 2+ GHz Processor<br></li>
+										<li><strong>内存:</strong> 4 GB RAM<br></li>
+										<li><strong>显卡:</strong> OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst
+											10.9, nVidia 358.50)<br></li>
+										<li><strong>DirectX 版本:</strong> 9.0<br></li>
+										<li><strong>存储空间:</strong> 需要 2 GB 可用空间<br></li>
+										<li><strong>附注事项:</strong> 1280x768 or better Display. Lag may occur from loading menus or maps. Turn off
+											other programs before running the game.</li>
+									</ul>
+								</ul>
+							</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div id="cdiv" class="gm"><a name="c0"></a>
+		
+			
+			<div id="chd">
+				<p id="postnewcomment">
+					[<a href="#formdiv" class="comment">发起新评论</a>]
+				</p>
+			</div>
+			<a name="cnew"></a>
+			<div id="formdiv">
+				<form method="post" action="#cnew">
+					<textarea name="commenttext_new" placeholder="发布评论注意遵守国家法律法规"></textarea>
+					<p><input type="submit" value="发表评论"></p>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>
