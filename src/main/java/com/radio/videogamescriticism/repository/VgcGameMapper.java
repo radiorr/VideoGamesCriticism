@@ -21,6 +21,6 @@ public interface VgcGameMapper {
             "where game_id='#{game_id}'")
     int getOneconnum(int game_id);
 
-    @Select("SELECT * FROM vgc_game")
+    @Select("SELECT game_id,game_zname,game_group,game_pic_url FROM vgc_game")
     List<VgcGame> getAllinfo();
 }

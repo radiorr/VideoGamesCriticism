@@ -16,6 +16,7 @@ import java.util.List;
 public class IndexController{
     @Autowired
     private VgcUserService vgcuserService;
+    @Autowired
     private VgcGameService vgcgameService;
 
     @RequestMapping("/index")

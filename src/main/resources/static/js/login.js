@@ -230,7 +230,7 @@ $(document).ready(function() {
 			});
 
 	// 回车登录
-
+/* 
 	$(document)
 		.keyup(
 			function(event) {
@@ -239,6 +239,6 @@ $(document).ready(function() {
 						"disabled") == false) {
 					$(".logincheck").trigger("click");
 				}
-			});
+			}); */
 
 });
