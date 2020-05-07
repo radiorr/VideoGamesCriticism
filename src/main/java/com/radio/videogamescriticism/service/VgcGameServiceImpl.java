@@ -30,7 +30,10 @@ public class VgcGameServiceImpl implements VgcGameService{
         return vgcgamemapper.getOneconnum(game_id);
     };
     @Override
-    public List<VgcGame> getAllinfo(){
+    public List<VgcGame> getAllinfo() {
         return vgcgamemapper.getAllinfo();
-    };
+    }
+
+    ;
+
 }

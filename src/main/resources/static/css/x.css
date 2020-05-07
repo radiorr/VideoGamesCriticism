@@ -18,13 +18,12 @@ img {
 }
 
 a {
-	color: #DDDDDD!important;
-	text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 a:hover {
 	color: #EEEEEE;
-	text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 map {
@@ -300,7 +299,7 @@ div.ido {
 	margin: 10px auto 10px auto;
 	padding: 5px;
 	position: relative;
-	margin-top: 54px;
+    margin-top: 60px;
 }
 
 h1.ih {
@@ -2294,7 +2293,7 @@ div.sb img {
 
 div.fica {
 	position: absolute;
-	top: -3px;
+    top: -4px;
 	left: 0px;
 }
 
@@ -2311,3 +2310,22 @@ div.num {
 	border-radius: 5px;
 }
 
+div#back-to-top {
+    position: fixed;
+    bottom: 18px;
+    right: 12px;
+    z-index: 999;
+    font-size: 35px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+a:hover .nav-link {
+    color: #EEEEEE;
+}

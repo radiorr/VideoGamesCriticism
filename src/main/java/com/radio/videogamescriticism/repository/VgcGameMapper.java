@@ -21,6 +21,10 @@ public interface VgcGameMapper {
             "where game_id='#{game_id}'")
     int getOneconnum(int game_id);
 
-    @Select("SELECT game_id,game_zname,game_group,game_pic_url FROM vgc_game")
+    @Select("SELECT vgc_game.game_id,game_zname,sum(game_grade)/count(user_id) as game_info ,game_group,game_pic_url\n" +
+            "FROM vgc_game left join vgc_grade on vgc_game.game_id=vgc_grade.game_id\n" +
+            "group by vgc_game.game_id")
     List<VgcGame> getAllinfo();
+
+
 }
