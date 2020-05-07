@@ -55,4 +55,16 @@ public class VgcComment {
     public void setCom_time(String com_time) {
         this.com_time = com_time;
     }
+
+    @Override
+    public String toString() {
+        return "VgcComment{" +
+                "comm_id=" + comm_id +
+                ", user_id=" + user_id +
+                ", game_id=" + game_id +
+                ", game_comment='" + game_comment + '\'' +
+                ", com_time='" + com_time + '\'' +
+                ", nickname='" + nickname + '\'' +
+                '}';
+    }
 }

@@ -73,4 +73,18 @@ public class VgcGame {
     public void setGame_group(String game_group) {
         this.game_group = game_group;
     }
+
+    @Override
+    public String toString() {
+        return "VgcGame{" +
+                "game_id=" + game_id +
+                ", game_zname='" + game_zname + '\'' +
+                ", game_ename='" + game_ename + '\'' +
+                ", game_pic_url='" + game_pic_url + '\'' +
+                ", game_date='" + game_date + '\'' +
+                ", game_terrace='" + game_terrace + '\'' +
+                ", game_info='" + game_info + '\'' +
+                ", game_group='" + game_group + '\'' +
+                '}';
+    }
 }

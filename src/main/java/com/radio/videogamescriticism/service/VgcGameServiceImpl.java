@@ -18,7 +18,7 @@ public class VgcGameServiceImpl implements VgcGameService{
         return vgcgamemapper.getAll();
     };
     @Override
-    public VgcGame getOne(int game_id){
+    public VgcGame getOne(int game_id) {
         return vgcgamemapper.getOne(game_id);
     };
     @Override

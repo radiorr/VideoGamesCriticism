@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $("body").prepend("<div href='#top' id='back-to-top'>" +
+        "<span aria-hidden='true' class='icon-arrow-up'></span>" +
+        "</div>"
+    );
 
     $("body").prepend("<nav class='navbar navbar-expand-md bg-dark navbar-dark fixed-top'>" +
         "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>" +
