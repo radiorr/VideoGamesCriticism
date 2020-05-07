@@ -1472,7 +1472,8 @@ div.gm {
 	max-width: 1200px;
 	margin: 10px auto;
 	padding: 3px 5px;
-	position: relative
+    position: relative;
+    margin-top: 60px;
 }
 
 div#gleft {
@@ -2320,6 +2321,7 @@ div#back-to-top {
     border: 1px solid #ced4da;
     border-radius: 5px;
     padding: 0px 5px;
+    color: #212529;
 }
 
 .nav-link {
