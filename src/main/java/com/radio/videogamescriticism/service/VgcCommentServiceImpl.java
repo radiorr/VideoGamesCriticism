@@ -4,9 +4,10 @@ import com.radio.videogamescriticism.domain.VgcComment;
 import com.radio.videogamescriticism.repository.VgcCommentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
-@Service("vgccommentService")
+@Service("vgccommentservice")
 public class VgcCommentServiceImpl implements VgcCommentService{
     @Autowired
     private VgcCommentMapper vgccommentmapper;

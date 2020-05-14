@@ -14,7 +14,7 @@ $(document).ready(function () {
         "<ul class='navbar-nav'>" +
         "<li class='nav-item'><a class='nav-link' href='/'>首页</a></li>" +
         "<li class='nav-item'><a class='nav-link' href='/login'>登录</a></li>" +
-        "<li class='nav-item'><a class='nav-link' href='#'>Link3</a></li>" +
+        "<li class='nav-item'><a class='nav-link' href='/gra'>评分</a></li>" +
         "<li class='nav-item'><a class='nav-link' href='#'>Link3</a></li>" +
         "<li class='nav-item'>" +
         "</li>" +

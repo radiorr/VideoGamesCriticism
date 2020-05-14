@@ -306,3 +306,33 @@ input[type='checkbox'] {
 .slider.active>i {
 	color: green;
 }
+
+.checktext {
+    background: #424242bd;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.rnumber {
+    margin-top: 23px;
+}
+
+.nickname {
+    margin-top: 120px;
+}
+
+.rpassword {
+    margin-top: 216px;
+}
+
+.modal-content {
+    background-color: #3c3c3c;
+}
+
+.close {
+    color: #fff;
+}
+
+.close:hover {
+    color: #F1F1F1;
+}

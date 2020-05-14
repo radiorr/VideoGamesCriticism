@@ -4,6 +4,7 @@ import com.radio.videogamescriticism.domain.VgcComment;
 
 import java.util.List;
 
+
 public interface VgcCommentService {
 
      List<VgcComment> getAll();

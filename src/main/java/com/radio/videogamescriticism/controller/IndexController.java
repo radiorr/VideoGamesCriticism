@@ -31,7 +31,6 @@ public class IndexController{
     @RequestMapping("/getAllGame")
     public List<VgcGame> gameinfo(HttpServletRequest request, HttpServletResponse response) {
         List<VgcGame> game = vgcgameService.getAllinfo();
-
         System.out.println("游戏数据加载");
         return game;
     }

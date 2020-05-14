@@ -1,10 +1,10 @@
 $(document).ready(function() {
-	
+
 	$(".regbox").hide();
-	$(".reg").click(function(){
+    $(".reg").click(function () {
 		$(".loginbox").toggle();
 		$(".regbox").toggle();
-	});	
+    });
 
 
 	function getEle(selector) {
@@ -143,7 +143,7 @@ $(document).ready(function() {
 		// 如果账户或者密码为空，则提示账号或密码为空
 		if (login == "" || pwsd == "") {
 			$("#rightbox").text("");
-			$("#errbox").text("工号或密码不能为空!");
+            $("#errbox").text("账号或密码不能为空!");
 			$(".logincheck").attr('disabled', true);
 			slider.onmousedown = null;
 		} else {
@@ -220,7 +220,7 @@ $(document).ready(function() {
 								$("#rightbox")
 									.text("");
 								$('#errbox').text(
-									'工号或密码错误');
+                                    '账号或密码错误');
 								isSuccess = false;
 								var e = e || window.event || e.which;
 								mouseupHandler(e);
@@ -230,15 +230,163 @@ $(document).ready(function() {
 			});
 
 	// 回车登录
-/* 
-	$(document)
-		.keyup(
-			function(event) {
-				if (event.keyCode == 13 &&
-					$(".logincheck").prop(
-						"disabled") == false) {
-					$(".logincheck").trigger("click");
-				}
-			}); */
+    /*
+        $(document)
+            .keyup(
+                function(event) {
+                    if (event.keyCode == 13 &&
+                        $(".logincheck").prop(
+                            "disabled") == false) {
+                        $(".logincheck").trigger("click");
+                    }
+                });*/
 
+
+    $(".rnumber").hide();
+    $(".nickname").hide();
+    $(".rpassword").hide();
+    $(".regcheck").attr('disabled', true);
+
+    $("#rnumber").focus(function () {
+        $(".rnumber").toggle();
+    });
+
+    $("#nickname").focus(function () {
+        $(".nickname").toggle();
+    });
+
+    $("#rpassword").focus(function () {
+        $(".rpassword").toggle();
+    });
+
+    $("#rnumber").blur(function () {
+        $(".rnumber").toggle();
+    });
+
+    $("#nickname").blur(function () {
+        $(".nickname").toggle();
+    });
+
+    $("#rpassword").blur(function () {
+        $(".rpassword").toggle();
+    });
+
+    $("input").focus(function () {
+        $("#rerrbox").text(""); // 把label的内容清空！
+    });
+
+
+    $("input").blur(function () {
+        var c = /^[a-zA-Z]\w{8,14}$/;
+        var rnickname = /^\w{0,14}$/;
+
+        var login = $("#rnumber").val();
+        var nickname = $("#nickname").val();
+        var pwsd = $("#rpassword").val();
+        var pwsd2 = $("#rpassword2").val();
+
+        if (!c.test(login)) {
+            $(".rightbox").text("");
+            $(".rerrbox").text("账号格式错误");
+            return false;
+        } else {
+            $(".rightbox").text("");
+        }
+        if (!rnickname.test(nickname)) {
+            $(".rightbox").text("");
+            $(".rerrbox").text("昵称格式错误");
+            return false;
+        } else {
+            $(".rightbox").text("");
+        }
+        if (!c.test(pwsd)) {
+            $(".rightbox").text("");
+            $(".rerrbox").text("密码格式错误");
+            return false;
+        } else {
+            $(".rightbox").text("");
+        }
+        if (pwsd != pwsd2) {
+            $(".rightbox").text("");
+            $(".rerrbox").text("密码错误");
+            return false;
+        } else {
+            $(".rightbox").text("");
+        }
+
+        if (!$(".ragree").prop("checked")) {
+            $(".rightbox").text("");
+            $(".rerrbox").text("未同意条款");
+            return false;
+        } else {
+            $(".rightbox").text("");
+        }
+        // 如果账户或者密码为空，则提示账号或密码为空
+        if (login == "" || pwsd == "" || nickname == "") {
+            $(".rightbox").text("");
+            $(".rerrbox").text("账号或密码或昵称不能为空!");
+            return false;
+        } else {
+            $(".regcheck").attr('disabled', false);
+            $(".rightbox").text("");
+        }
+
+
+    });
+
+
+    $(".regcheck")
+        .click(
+            function () {
+                var login = $("#rnumber").val();
+                var nickname = $("#nickname").val();
+                var pwsd = $("#rpassword").val();
+
+                $("#rightbox").text("");
+                $("#errbox").text("");
+                $(".logincheck").attr('disabled', true);
+                $("#rightbox").text("正在登录...");
+
+                $.ajax({
+                    type: 'post',
+                    url: 'usercheck',
+                    data: {
+                        rnumber: login,
+                        rpassword: pwsd,
+                        nickname: nickname
+                    },
+                    dataType: 'json',
+                    cache: false,
+                    success: function (result) {
+
+                        if ($(".remember")
+                            .prop(
+                                "checked")) {
+                            // 有效期七天
+                            $
+                                .cookie(
+                                    "remember",
+                                    "true", {
+                                        expires: 1
+                                    });
+                            $
+                                .cookie(
+                                    "username",
+                                    login, {
+                                        expires: 1
+                                    });
+                            window.location.href = 'test'
+                        } else {
+
+                            $("#rightbox")
+                                .text("");
+                            $('#errbox').text(
+                                '账号或密码错误');
+                        }
+                    }
+                });
+            });
+	
+	
+	
 });

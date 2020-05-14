@@ -2,20 +2,6 @@ html {
 	height: 100%;
 }
 
-body {
-	color: #424242;
-	background-color: #92AFD7 !important;
-	background: url("/bg02a.jpg");
-	background-position: center 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
-	-moz-background-size: cover;
-	-ms-background-size: cover;
-}
-
 .navbar-dark .navbar-nav .nav-link {
 	color: #FBFBFB;
 }
