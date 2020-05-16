@@ -15,16 +15,16 @@ import java.util.List;
 
 @Controller
 public class CommentController {
-    int game_id = 0;
+    static int game_id = 0;
     @Autowired
     private VgcCommentService vgccommentservice;
 
     @ResponseBody
-    @RequestMapping("/getCom01")
-    public List<VgcComment> onegamecom(HttpServletRequest request, HttpServletResponse response) {
-        game_id = 1;
+    @RequestMapping("/getCom")
+    public List<VgcComment> onegamecom01(HttpServletRequest request, HttpServletResponse response) {
         List<VgcComment> comment = vgccommentservice.getcomment(game_id);
         System.out.println("游戏评论加载");
         return comment;
     }
+
 }

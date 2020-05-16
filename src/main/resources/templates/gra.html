@@ -1,114 +1,43 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>VideoGamesCriticism</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <title>VideoGamesCriticism-评分</title>
+        <link href="/x.css" rel="stylesheet"/>
+        <link href="/style2.css" rel="stylesheet"/>
 		<link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="/css/table.css" rel="stylesheet" />
-		<link href="/index.css" rel="stylesheet" />
 		<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 		<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<script src="/jquery.cookie.js"></script>
-		<script src="/gra.js"></script>
 		<script src="/convgc.js"></script>
-		
-		<title>导航机能测试</title>
-	</head>
-	<body>
+        <script src="/jquery.cookie.js"></script>
+    <body id="top">
 
-		<!--检索-->
-		<div class="row clearfix ido">
-			<div class="col-md-12 column" id="sea">
-				<div class="row clearfix">
-					<div class="col-md-12 column">
-						<div id="searchbox" class="idi column">
-							<form action="https://exhentai.org/" method="get" style="margin:0px; padding:0px">
-								<input type="hidden" id="f_cats" name="f_cats" value="0" disabled="disabled">
-								<table class="itc">
-									<tbody>
-										<tr>
-											<td>
-												<div id="cat_2" class="cs ct2" onclick="toggle_category(2)">RPG</div>
-											</td>
-											<td>
-												<div id="cat_4" class="cs ct3" onclick="toggle_category(4)">MOBA</div>
-											</td>
-											<td>
-												<div id="cat_8" class="cs ct4" onclick="toggle_category(8)">FPS</div>
-											</td>
-											<td>
-												<div id="cat_16" class="cs ct5" onclick="toggle_category(16)">TPS</div>
-											</td>
-											<td>
-												<div id="cat_512" class="cs cta" onclick="toggle_category(512)">TCG</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div id="cat_256" class="cs ct9" onclick="toggle_category(256)">ACT</div>
-											</td>
-											<td>
-												<div id="cat_32" class="cs ct6" onclick="toggle_category(32)">FTG</div>
-											</td>
-											<td>
-												<div id="cat_64" class="cs ct7" onclick="toggle_category(64)">STG</div>
-											</td>
-											<td>
-												<div id="cat_128" class="cs ct8" onclick="toggle_category(128)">RTS</div>
-											</td>
-											<td>
-												<div id="cat_1" class="cs ct1" onclick="toggle_category(1)">AVG</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<p class="nopm">
-									<input type="text" id="f_search" name="f_search" placeholder="Search Keywords" size="50" maxlength="200">
-									<input type="submit" value="Apply Filter" onclick="search_presubmit()">
-									<input type="button" value="Clear Filter" onclick="top.location.href='https://exhentai.org/'; return false">
-								</p>
-								<div id="advdiv" style="display:none"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="row clearfix">
-					<div class="col-md-12 column">
-					</div>
-				</div>
+    <div class="ido" style="max-width:1370px">
+        <div id="toppane">
+            <div class="idi" id="searchbox">
+
+            </div>
+            <div class="idi" id="fsdiv" style="margin-top:10px; display:none"></div>
+        </div>
+        <div style="position:relative; z-index:2">
+            <div class="itg gld">
+                <div class="gm" id="cdiv"><a name="c0"></a>
+                    <div id="chd">
+                        <p id="postnewcomment">
+                            [<a class="comment" href="#formdiv">发起新评论</a>]
+                        </p>
+                    </div>
+                    <a name="cnew"></a>
+                    <div id="formdiv">
+                        <form action="#cnew" method="post">
+                            <textarea name="commenttext_new" placeholder="发布评论注意遵守国家法律法规"></textarea>
+                            <p><input type="submit" value="发表评论"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
 			</div>
-			<ul class="pagination ptt" style="margin: 0px auto 0px;">
-				<li><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">6</a></li>
-				<li><a href="#">7</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
-			<!--列表-->
-			<div class="itg gld">
-				
-				
-
-				
-			</div>
-
-			<ul class="pagination ptt" style="margin: 0px auto 0px;">
-				<li><a href="#">&laquo;</a></li>
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">6</a></li>
-				<li><a href="#">7</a></li>
-				<li><a href="#">&raquo;</a></li>
-			</ul>
 		</div>
-
+    <div class="sel-text-win" id="sel-ext-win" style="display: none;"></div>
 	</body>
 </html>

@@ -1476,6 +1476,10 @@ div.gm {
     margin-top: 60px;
 }
 
+div#cdiv {
+    margin-top: 10px;
+}
+
 div#gleft {
 	position: absolute;
 	top: 0;
@@ -1900,6 +1904,7 @@ td.tc {
 }
 
 #postnewcomment {
+    border-top: 1px solid #000000;
 	font-weight: bold
 }
 
