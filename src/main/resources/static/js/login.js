@@ -214,7 +214,7 @@ $(document).ready(function() {
 											});
 
 								}
-								window.location.href = 'test'
+                                window.location.href = '/'
 							} else {
 
 								$("#rightbox")
@@ -375,7 +375,7 @@ $(document).ready(function() {
                                     login, {
                                         expires: 1
                                     });
-                            window.location.href = 'test'
+                            window.location.href = '/'
                         } else {
 
                             $("#rightbox")

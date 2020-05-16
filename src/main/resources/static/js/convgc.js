@@ -12,10 +12,10 @@ $(document).ready(function () {
         "</div>" +
         "<div class='collapse navbar-collapse' id='collapsibleNavbar'>" +
         "<ul class='navbar-nav'>" +
-        "<li class='nav-item'><a class='nav-link' href='/'>首页</a></li>" +
-        "<li class='nav-item'><a class='nav-link' href='/login'>登录</a></li>" +
-        "<li class='nav-item'><a class='nav-link' href='/gra'>评分</a></li>" +
-        "<li class='nav-item'><a class='nav-link' href='#'>设置</a></li>" +
+        "<li class='nav-item'><a class='nav-link indexhtml' href='#'>首页</a></li>" +
+        "<li class='nav-item'><a class='nav-link loginhtml' href='#'>登录</a></li>" +
+        "<li class='nav-item'><a class='nav-link gra' href='#'>评分</a></li>" +
+        "<li class='nav-item'><a class='nav-link setting' href='#'>设置</a></li>" +
         "<li class='nav-item'>" +
         "</li>" +
         "</ul>" +
@@ -42,4 +42,22 @@ $(document).ready(function () {
             return false;
         });
     });
+
+    $(".indexhtml").click(function () {
+        window.location.href = '/'
+    })
+
+    $(".loginhtml").click(function () {
+        window.location.href = 'login'
+    })
+
+    $(".gra").click(function () {
+        window.location.href = 'gra'
+    })
+
+    $(".setting").click(function () {
+        window.location.href = 'setting'
+    })
+	
+	
 });
