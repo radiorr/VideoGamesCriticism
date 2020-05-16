@@ -10,6 +10,4 @@ public interface VgcGradeMapper {
     @Select("SELECT * FROM vgc_grade")
     public List<VgcGrade> getAll();
 
-
-
 }

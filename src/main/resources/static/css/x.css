@@ -1496,8 +1496,7 @@ div#gmid {
 
 div#gright {
 	float: right;
-	width: 165px;
-	height: 330px;
+    margin-right: 5%;
 	position: relative;
 	background: #4f535b;
 	z-index: 2;
@@ -1534,7 +1533,7 @@ div#gd2 {
 }
 
 h1#gn {
-	font-size: 12pt;
+    font-size: 20pt;
 	padding: 0 0 2px;
 	margin: 3px 15px
 }
@@ -2150,7 +2149,7 @@ div#spa img {
 		max-width: 960px
 	}
 
-	div#gdt {
+    div.gdt {
 		max-width: 960px
 	}
 
@@ -2169,11 +2168,14 @@ div#spa img {
 		visibility: hidden !important
 	}
 
+    div.gdt {
+        max-width: 720px
+    }
 	div.gm {
 		max-width: 720px
 	}
 
-	div#gdt {
+    div.gdt {
 		max-width: 720px
 	}
 
@@ -2190,6 +2192,7 @@ div#spa img {
 	}
 
 	div#gmid {
+        float: left;
 		width: 545px
 	}
 
@@ -2334,8 +2337,8 @@ a:hover .nav-link {
 
 
 .game_area_description ul {
-    color: #acb2b8;
-    margin-left: 16px;
+    margin-left: 30%;
+    font-size: 15px;
     list-style-type: square;
 }
 
@@ -2344,11 +2347,13 @@ a:hover .nav-link {
     margin-left: 20px;
 }
 
-.game_area_description ul li, .game_area_description ol li {
+.game_area_description ul li,
+.game_area_description ol li {
     margin-bottom: 8px;
 }
 
 .sysreq_contents {
+    margin-left: 20%;
     margin-top: 10px;
 }
 
@@ -2356,7 +2361,8 @@ a:hover .nav-link {
 .album_metadata_chunk_contents {
     font-size: 12px;
     font-family: "Motiva Sans", Sans-serif;
-    font-weight: normal; /* normal */
+    font-weight: normal;
+    /* normal */
 
 }
 
@@ -2368,7 +2374,7 @@ a:hover .nav-link {
 .album_metadata_chunk_name {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 20px;
     color: #bcc6cd;
     text-transform: uppercase;
     display: inline-block;
@@ -2390,7 +2396,7 @@ a:hover .nav-link {
 }
 
 .game_area_sys_req ul li strong {
-    color: #61686D;
+
     font-size: 12px;
     margin-right: 4px;
     font-weight: normal;
@@ -2398,12 +2404,14 @@ a:hover .nav-link {
     text-transform: none;
 }
 
-.game_area_sys_req_leftCol, .game_area_sys_req_rightCol {
+.game_area_sys_req_leftCol,
+.game_area_sys_req_rightCol {
     float: left;
     width: 300px;
 }
 
-.help_sysreqs .game_area_sys_req_leftCol, .help_sysreqs .game_area_sys_req_rightCol {
+.help_sysreqs .game_area_sys_req_leftCol,
+.help_sysreqs .game_area_sys_req_rightCol {
     width: 282px;
 }
 
@@ -2541,14 +2549,22 @@ a:hover .nav-link {
 .game_area_details_specs a.name:hover {
     text-decoration: none;
     color: #ffffff;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #67c1f5), color-stop(100%, #417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67c1f5', endColorstr='#417a9b', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    background: #67c1f5;
+    /* Old browsers */
+    background: -moz-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #67c1f5), color-stop(100%, #417a9b));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* IE10+ */
+    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67c1f5', endColorstr='#417a9b', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 .game_area_details_specs div.name {
@@ -2608,14 +2624,22 @@ a:hover .nav-link {
 .block a.linkbar:hover {
     text-decoration: none;
     color: #ffffff;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #67c1f5), color-stop(100%, #417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67c1f5', endColorstr='#417a9b', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    background: #67c1f5;
+    /* Old browsers */
+    background: -moz-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #67c1f5), color-stop(100%, #417a9b));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg, #67c1f5 0%, #417a9b 100%);
+    /* IE10+ */
+    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67c1f5', endColorstr='#417a9b', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 a.linkbar > img {
@@ -2663,7 +2687,8 @@ table.game_language_options {
     color: #67c1f5;
 }
 
-.game_language_options td.checkcol, .game_language_options th.checkcol {
+.game_language_options td.checkcol,
+.game_language_options th.checkcol {
     width: 62px;
 }
 
@@ -2693,4 +2718,17 @@ table.game_language_options {
     font-weight: normal;
     text-transform: uppercase;
     font-size: 10px;
+}
+
+.game_page_autocollapse h2,
+.game_page_autocollapse_ctn h2 {
+    background: #34353b;
+    border: 1px solid #4f535b;
+    padding: 10px;
+    margin: 20px;
+}
+
+.game_area_text {
+    font-size: 15px;
+    padding: 0% 3%;
 }

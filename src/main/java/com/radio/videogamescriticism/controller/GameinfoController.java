@@ -21,6 +21,9 @@ public class GameinfoController{
     public String gameinfo01(Model model) {
         game_id = 1;
         VgcGame game = vgcgameService.getOne(game_id);
+        int conum = vgcgameService.getOneconnum(game_id);
+        game.setGame_id(conum);
+        game.setSumgrade(vgcgameService.getOnesumgrade(game_id) / conum);
         model.addAttribute("game", game);
         return "gameinfo";
     }

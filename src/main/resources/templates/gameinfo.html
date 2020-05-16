@@ -32,10 +32,11 @@
             <div class="f20 fb" style="margin-top:5px;margin-bottom:15px;margin-left: 50px;">游戏评分</div>
             <div class="center-block"
                  style="width: 84px;height: 84px;background: #363636;border: 4px solid #000000;margin-top: 6px;margin-left: 30px;">
-                <div class="text-center" style=" height: 80px; line-height: 80px;  font-size: 40px; font-weight: bold;">
+                <div class="text-center"
+                     style=" line-height: 80px;  font-size: 40px; font-weight: bold; box-sizing: inherit;"
+                     th:text="*{sumgrade}">
                     N/A
                 </div>
-                <!--th:text="*{game_grade}" -->
             </div>
             <div></div>
         </div>
@@ -62,10 +63,10 @@
                         <td class="gdt1">类型:</td>
                         <td class="gdt2" th:text="*{game_group}"></td>
                     </tr>
-                    <!-- <tr>
+                    <tr>
                         <td class="gdt1">评分人数:</td>
-                        <td class="gdt2" id="favcount" th:text="*{Connum}">0</td>
-                    </tr> -->
+                        <td class="gdt2" th:text="*{game_id}">0</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -92,9 +93,13 @@
         <div class="game_page_autocollapse" style="max-height: none;">
             <div class="game_area_description" id="game_area_description">
                 <h2>关于这款游戏</h2>
-                邪王放出的魔物大军们威胁着世界的安危，为了与它抗衡，生活在另一维度世界中的神：龙，决定赋予龙人以力量。<br><br>伊莫斯和他的妹妹朶莉住在一个不起眼的小村庄里，两人一起经营着一家药店。除了妹妹，伊莫斯身边还有青梅竹马的玩伴龙人洛蒂亚，温柔的学者克里米娜，还有假小子公主爱娜。<br><br>忽然有一天，所有龙人包括洛蒂亚接到命令，他们需集所有人力量追捕邪王，至此伊莫斯平静的生活一去不复返。<br><br><strong>
+                <div class="game_area_text">
+                    邪王放出的魔物大军们威胁着世界的安危，为了与它抗衡，生活在另一维度世界中的神：龙，决定赋予龙人以力量。<br><br>
+                    伊莫斯和他的妹妹朶莉住在一个不起眼的小村庄里，两人一起经营着一家药店。除了妹妹，伊莫斯身边还有青梅竹马的玩伴龙人洛蒂亚，温柔的学者克里米娜，还有假小子公主爱娜。<br><br>
+                    忽然有一天，所有龙人包括洛蒂亚接到命令，他们需集所有人力量追捕邪王，至此伊莫斯平静的生活一去不复返。<br><br>
+                </div>
                 <h2 class="bb_tag">游戏特色</h2>
-            </strong><br>
+                </strong><br>
                 <ul class="bb_ul">
                     <li>经典RPG游戏体验<br></li>
                     <li>回合制战斗<br></li>

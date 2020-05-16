@@ -9,6 +9,15 @@ public class VgcGame {
     private String game_terrace;
     private String game_info;
     private String game_group;
+    private double sumgrade;
+
+    public double getSumgrade() {
+        return sumgrade;
+    }
+
+    public void setSumgrade(double sumgrade) {
+        this.sumgrade = sumgrade;
+    }
 
     public int getGame_id() {
         return game_id;
@@ -85,6 +94,7 @@ public class VgcGame {
                 ", game_terrace='" + game_terrace + '\'' +
                 ", game_info='" + game_info + '\'' +
                 ", game_group='" + game_group + '\'' +
+                ", sumgrade=" + sumgrade +
                 '}';
     }
 }
