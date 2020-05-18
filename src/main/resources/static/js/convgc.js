@@ -14,6 +14,7 @@ $(document).ready(function () {
         "<ul class='navbar-nav'>" +
         "<li class='nav-item'><a class='nav-link indexhtml' href='#'>首页</a></li>" +
         "<li class='nav-item'><a class='nav-link loginhtml' href='#'>登录</a></li>" +
+        "<li class='nav-item'><a class='nav-link loginouthtml' href='#'>登出</a></li>" +
         "<li class='nav-item'><a class='nav-link gra' href='#'>评分</a></li>" +
         "<li class='nav-item'><a class='nav-link setting' href='#'>设置</a></li>" +
         "<li class='nav-item'>" +
@@ -23,7 +24,25 @@ $(document).ready(function () {
         "</nav>"
     );
 
-    //首先将#back-to-top隐藏
+    $.ajax({
+        url: "getuser",
+        responseTime: 1000,
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            if (data) {
+                $(".loginhtml").toggle();
+                $(".loginouthtml").toggle();
+                console.log(data);
+                console.log("有用户");
+            } else {
+                console.log("无用户");
+            }
+        }
+
+    });
+
+    //#back-to-top隐藏
     $("#back-to-top").hide();
     //当滚动条的位置处于距顶部600像素以下时，跳转链接出现，否则消失
     $(function () {
@@ -50,6 +69,10 @@ $(document).ready(function () {
     $(".loginhtml").click(function () {
         window.location.href = 'login'
     })
+    $(".loginouthtml").hide();
+    $(".loginouthtml").click(function () {
+        window.location.href = 'loginout'
+    })
 
     $(".gra").click(function () {
         window.location.href = 'gra'
@@ -58,6 +81,8 @@ $(document).ready(function () {
     $(".setting").click(function () {
         window.location.href = 'setting'
     })
-	
-	
+
+
+
+
 });

@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.radio.videogamescriticism.repository")
 public class VgcApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(VgcApplication.class, args);
     }

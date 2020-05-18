@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".regbox").hide();
+    $(".regbox").hide();
     $(".reg").click(function () {
 		$(".loginbox").toggle();
 		$(".regbox").toggle();
@@ -161,8 +161,8 @@ $(document).ready(function() {
 	$(".logincheck")
 		.click(
 			function() {
-				var login = $("#tnumber").val();
-				var pwsd = $("#tpassword").val();
+                var tnumber = $("#tnumber").val();
+                var tpassword = $("#tpassword").val();
 
 				$("#rightbox").text("");
 				$("#errbox").text("");
@@ -173,8 +173,8 @@ $(document).ready(function() {
 						type: 'post',
 						url: 'usercheck',
 						data: {
-							tnumber: login,
-							tpassword: pwsd
+                            tnumber: tnumber,
+                            tpassword: tpassword
 						},
 						dataType: 'json',
 						cache: false,
@@ -193,7 +193,7 @@ $(document).ready(function() {
 											});
 									$
 										.cookie(
-											"username",
+                                            "tnumber",
 											login, {
 												expires: 7
 											});
@@ -208,7 +208,7 @@ $(document).ready(function() {
 											});
 									$
 										.cookie(
-											"username",
+                                            "tnumber",
 											"", {
 												expires: -1
 											});
@@ -338,9 +338,9 @@ $(document).ready(function() {
     $(".regcheck")
         .click(
             function () {
-                var login = $("#rnumber").val();
+                var rnumber = $("#rnumber").val();
                 var nickname = $("#nickname").val();
-                var pwsd = $("#rpassword").val();
+                var rpassword = $("#rpassword").val();
 
                 $("#rightbox").text("");
                 $("#errbox").text("");
@@ -349,10 +349,10 @@ $(document).ready(function() {
 
                 $.ajax({
                     type: 'post',
-                    url: 'usercheck',
+                    url: 'regcheck',
                     data: {
-                        rnumber: login,
-                        rpassword: pwsd,
+                        rnumber: rnumber,
+                        rpassword: rpassword,
                         nickname: nickname
                     },
                     dataType: 'json',
@@ -362,7 +362,7 @@ $(document).ready(function() {
                         if ($(".remember")
                             .prop(
                                 "checked")) {
-                            // 有效期七天
+
                             $
                                 .cookie(
                                     "remember",
@@ -371,10 +371,12 @@ $(document).ready(function() {
                                     });
                             $
                                 .cookie(
-                                    "username",
+                                    "rnumber",
                                     login, {
                                         expires: 1
                                     });
+                            $(".indexhtml").toggle();
+                            $(".loginouthtml").toggle();
                             window.location.href = '/'
                         } else {
 

@@ -19,7 +19,7 @@ public class IndexController{
     @Autowired
     private VgcGameService vgcgameService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String login(HttpServletRequest request, HttpServletResponse response) {
 
         System.out.println("外部用户进入登录页");
