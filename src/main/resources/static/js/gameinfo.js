@@ -4,6 +4,7 @@ $(document).ready(function () {
         $("#formdiv").toggle();
         $("#postnewcomment").hide();
     })
+
     $.ajax({
         url: "getCom",
         responseTime: 1000,

@@ -90,11 +90,11 @@ public class LoginController {
 
     @ResponseBody
     @RequestMapping("/getuser")
-    public Object gameinfo(HttpServletRequest request, HttpServletResponse response) {
-        Object session = request.getSession().getAttribute("userInfo");
+    public String gameinfo(HttpServletRequest request, HttpServletResponse response) {
+        String sessionuser = (String) request.getSession().getAttribute("userInfo");
         System.out.println("getuser用户是否已登录");
-        System.out.println("getuser:" + session);
-        return session;
+        System.out.println("getuser:" + sessionuser);
+        return sessionuser;
     }
 
     public int checkuser(VgcUser user, HttpServletRequest request, HttpServletResponse response, String number, String password) {

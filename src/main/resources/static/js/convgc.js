@@ -27,19 +27,15 @@ $(document).ready(function () {
     $.ajax({
         url: "getuser",
         responseTime: 1000,
-        dataType: 'json',
+        method: "get",
+        dataType: "text",
         success: function (data) {
-            console.log(data);
             if (data) {
+
                 $(".loginhtml").toggle();
                 $(".loginouthtml").toggle();
-                console.log(data);
-                console.log("有用户");
-            } else {
-                console.log("无用户");
             }
         }
-
     });
 
     //#back-to-top隐藏
