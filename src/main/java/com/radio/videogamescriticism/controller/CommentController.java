@@ -28,6 +28,10 @@ public class CommentController {
     public List<VgcComment> onegamecom01(HttpServletRequest request, HttpServletResponse response) {
         List<VgcComment> comment = vgccommentservice.getcomment(game_id);
         System.out.println("游戏评论加载");
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         return comment;
     }
 
@@ -38,6 +42,10 @@ public class CommentController {
         String username = request.getParameter("username");
         String commenttext = request.getParameter("commenttext");
         String user_id = vgcuserService.getuserid(username);
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         if (user_id != null && commenttext != null && username != null && game_id != null) {
             vgccommentservice.insertcomment(user_id, game_id, commenttext);
             return 1;

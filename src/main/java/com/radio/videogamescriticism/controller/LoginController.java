@@ -36,6 +36,10 @@ public class LoginController {
         System.out.println(tpassword);
         VgcUser user = vgcuserService.checkOne(tnumber, tpassword);
         System.out.println(user);
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         return checkuser(user, request, response, tnumber, tpassword);
     }
 
@@ -52,13 +56,19 @@ public class LoginController {
         System.out.println("外部注册用户："+nickname+"进入注册");
         System.out.println("username:"+rnumber);
         System.out.println("password:"+rpassword);
-
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         VgcUser cherename = vgcuserService.renamecheck(rnumber);
         if (cherename !=null){
             System.out.println("重名");
             return 0;
         }
-
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         vgcuserService.insert(rnumber, rpassword, nickname);
         System.out.println("外部注册用户："+nickname+"注册成功");
         VgcUser user = vgcuserService.checkOne(rnumber, rpassword);
@@ -70,7 +80,10 @@ public class LoginController {
     @RequestMapping(value = "/loginout")
     public String loginout(HttpServletRequest request) {
         System.out.println("登出操作");
-
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         HttpSession session = request.getSession();
 
         // 将用户信息从session中删除
@@ -109,7 +122,10 @@ public class LoginController {
             usernameCookie.setMaxAge(7 * 60 * 60);
             usernameCookie.setPath("/");
             response.addCookie(usernameCookie);
-
+            try {
+                Thread.currentThread().sleep(5 * 1000);
+            } catch (InterruptedException e) {
+            }
             Cookie[] cookies = request.getCookies();
             System.out.println("外部的SessionId:" + session.getId());
             for (Cookie cookie : cookies) {

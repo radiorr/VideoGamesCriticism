@@ -30,24 +30,6 @@ $(document).ready(function () {
         }
     });
 
-    function cominfoTemplate(comment) {
-        return "<div class='c1'>" +
-            "<div class='c2'>" +
-            "<div class='c3'>" + comment.com_time + " &nbsp; " + comment.nickname + "</div>" +
-            "<div class='c4 nosel'><a name='ulcomment'></a></div>" +
-            "<div class='c'></div>" +
-            "</div>" +
-            "<div class='c6'>" + comment.game_comment + "</div>" +
-            "<div class='c7' style='display:none'></div>" +
-            "</div>";
-    }
-
-
-    function nonconinfoTemplate() {
-        return "<div class='noncom'>暂无评论" +
-            "</div>";
-    }
-
     var commenttext;
     $(".comsub").click(function () {
         if (username == null) {
@@ -68,18 +50,46 @@ $(document).ready(function () {
             cache: false,
             success: function (result) {
                 if (result == 1) {
-                    //alert("评论成功!");用别的插入提示框
+                    $("#chd").prepend(alertsuccess());
+
                     window.location.reload();
                 } else {
-                    //alert("评论失败!");用别的插入提示框
+                    $("#chd").prepend(alertdanger());
+
                 }
 
             }
         });
-
     });
-	
 
+
+    function cominfoTemplate(comment) {
+        return "<div class='c1'>" +
+            "<div class='c2'>" +
+            "<div class='c3'>" + comment.com_time + " &nbsp; " + comment.nickname + "</div>" +
+            "<div class='c4 nosel'><a name='ulcomment'></a></div>" +
+            "<div class='c'></div>" +
+            "</div>" +
+            "<div class='c6'>" + comment.game_comment + "</div>" +
+            "<div class='c7' style='display:none'></div>" +
+            "</div>";
+    }
+
+
+    function nonconinfoTemplate() {
+        return "<div class='noncom'>暂无评论" +
+            "</div>";
+    }
+
+
+    function alertsuccess() {
+        return "<div class='alert alert-success alert-dismissable'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>评论成功!</div>"
+
+    }
+
+    function alertdanger() {
+        return "<div class='alert alert-danger alert-dismissable'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>评论失败!</div>"
+    }
 
 
 

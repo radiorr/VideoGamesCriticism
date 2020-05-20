@@ -32,6 +32,10 @@ public class IndexController{
     public List<VgcGame> gameinfo(HttpServletRequest request, HttpServletResponse response) {
         List<VgcGame> game = vgcgameService.getAllinfo();
         System.out.println("游戏数据加载");
+        try {
+            Thread.currentThread().sleep(5 * 1000);
+        } catch (InterruptedException e) {
+        }
         return game;
     }
 
