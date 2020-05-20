@@ -13,9 +13,10 @@ $(document).ready(function() {
 							html += gameinfoTemplate(data[x]);
 						}
 						$(".itg").append(html);
-
+                        $(".none").hide();
 					} else {
-
+                        $(".itg").append(nongameinfoTemplate());
+                        $(".none").hide();
 					}
 				}
 			}
@@ -76,5 +77,10 @@ $(document).ready(function() {
 			"</div>" +
 			"</div>";
 	}
+
+    function nongameinfoTemplate() {
+        return "<div class='none'><p>数据库连接错误</p></div>"
+
+    }
 
 });

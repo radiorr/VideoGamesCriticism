@@ -27,13 +27,20 @@ public class IndexController{
         return "index";
     }
 
+    @RequestMapping("/demo2")
+    public String demo(HttpServletRequest request, HttpServletResponse response) {
+
+
+        return "demo2";
+    }
+
     @ResponseBody
     @RequestMapping("/getAllGame")
     public List<VgcGame> gameinfo(HttpServletRequest request, HttpServletResponse response) {
         List<VgcGame> game = vgcgameService.getAllinfo();
         System.out.println("游戏数据加载");
         try {
-            Thread.currentThread().sleep(5 * 1000);
+            Thread.currentThread().sleep(1 * 1000);
         } catch (InterruptedException e) {
         }
         return game;

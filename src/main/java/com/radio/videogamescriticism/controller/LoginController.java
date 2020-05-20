@@ -37,7 +37,7 @@ public class LoginController {
         VgcUser user = vgcuserService.checkOne(tnumber, tpassword);
         System.out.println(user);
         try {
-            Thread.currentThread().sleep(5 * 1000);
+            Thread.currentThread().sleep(1 * 1000);
         } catch (InterruptedException e) {
         }
         return checkuser(user, request, response, tnumber, tpassword);
@@ -57,17 +57,13 @@ public class LoginController {
         System.out.println("username:"+rnumber);
         System.out.println("password:"+rpassword);
         try {
-            Thread.currentThread().sleep(5 * 1000);
+            Thread.currentThread().sleep(1 * 1000);
         } catch (InterruptedException e) {
         }
         VgcUser cherename = vgcuserService.renamecheck(rnumber);
         if (cherename !=null){
             System.out.println("重名");
             return 0;
-        }
-        try {
-            Thread.currentThread().sleep(5 * 1000);
-        } catch (InterruptedException e) {
         }
         vgcuserService.insert(rnumber, rpassword, nickname);
         System.out.println("外部注册用户："+nickname+"注册成功");
@@ -123,7 +119,7 @@ public class LoginController {
             usernameCookie.setPath("/");
             response.addCookie(usernameCookie);
             try {
-                Thread.currentThread().sleep(5 * 1000);
+                Thread.currentThread().sleep(1 * 1000);
             } catch (InterruptedException e) {
             }
             Cookie[] cookies = request.getCookies();

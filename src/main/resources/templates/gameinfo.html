@@ -6,13 +6,17 @@
     <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/table.css" rel="stylesheet"/>
     <link href="/x.css" rel="stylesheet"/>
-    <link href="/style2.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
     <link href="/gameinfo.css" rel="stylesheet"/>
+    <link href="/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/star-rating.min.css" rel="stylesheet"/>
+
     <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="/jquery.cookie.js"></script>
     <script src="/convgc.js"></script>
     <script src="/gameinfo.js"></script>
+    <script src="/star-rating.min.js"></script>
 
 </head>
 <body th:object="${game}">
@@ -161,6 +165,7 @@
 
 </div>
 <div class="gm" id="cdiv"><a name="c0"></a>
+    <div class="noncom">加载中。。。</div>
     <div id="chd">
         <p id="postnewcomment">
             [<a class="comment" href="#formdiv">发起新评论</a>]

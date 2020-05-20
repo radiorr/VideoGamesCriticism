@@ -50,10 +50,12 @@ $(document).ready(function () {
             cache: false,
             success: function (result) {
                 if (result == 1) {
+                    $(".noncom").hide();
                     $("#chd").prepend(alertsuccess());
 
                     window.location.reload();
                 } else {
+                    $(".noncom").hide();
                     $("#chd").prepend(alertdanger());
 
                 }
@@ -77,7 +79,7 @@ $(document).ready(function () {
 
 
     function nonconinfoTemplate() {
-        return "<div class='noncom'>暂无评论" +
+        return "<div class='nonecom'>暂无评论" +
             "</div>";
     }
 

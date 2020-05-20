@@ -6,7 +6,7 @@ a.comment {
     font-size: 15px;
 }
 
-.noncom {
+.noncom, .nonecom {
     font-size: 25px;
     text-align: center;
     padding: 10%;
