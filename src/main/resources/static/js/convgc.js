@@ -1,9 +1,11 @@
+var username;
 $(document).ready(function () {
+    //回到顶部
     $("body").prepend("<div href='#top' id='back-to-top'>" +
         "<span aria-hidden='true' class='icon-arrow-up'></span>" +
         "</div>"
     );
-
+    //导航栏
     $("body").prepend("<nav class='navbar navbar-expand-md bg-dark navbar-dark fixed-top'>" +
         "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>" +
         "<span class='navbar-toggler-icon'></span>" +
@@ -24,6 +26,7 @@ $(document).ready(function () {
         "</nav>"
     );
 
+    //导航栏登录登出
     $.ajax({
         url: "getuser",
         responseTime: 1000,
@@ -31,7 +34,7 @@ $(document).ready(function () {
         dataType: "text",
         success: function (data) {
             if (data) {
-
+                username = data;
                 $(".loginhtml").toggle();
                 $(".loginouthtml").toggle();
             }
@@ -59,26 +62,24 @@ $(document).ready(function () {
     });
 
     $(".indexhtml").click(function () {
-        window.location.href = '/'
+        window.location.href = '/';
     })
 
     $(".loginhtml").click(function () {
-        window.location.href = 'login'
+        window.location.href = 'login';
     })
     $(".loginouthtml").hide();
     $(".loginouthtml").click(function () {
-        window.location.href = 'loginout'
+        window.location.href = 'loginout';
     })
 
     $(".gra").click(function () {
-        window.location.href = 'gra'
+        window.location.href = 'gra';
     })
 
     $(".setting").click(function () {
-        window.location.href = 'setting'
+        window.location.href = 'setting';
     })
-
-
 
 
 });

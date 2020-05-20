@@ -11,10 +11,10 @@
     <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="/jquery.cookie.js"></script>
-    <script src="/gameinfo.js"></script>
     <script src="/convgc.js"></script>
-</head>
+    <script src="/gameinfo.js"></script>
 
+</head>
 <body th:object="${game}">
 <div class="gm">
     <div id="gleft">
@@ -80,8 +80,8 @@
                 </div>
             </div>
             <div id="tagmenu_act" style="display:none"></div>
-            <div id="gwrd"><img id="waitroller" src="https://exhentai.org/img/roller.gif" style="visibility:hidden">
-            </div>
+
+        </div>
         </div>
         <div class="c"></div>
     </div>
@@ -169,8 +169,8 @@
     <a name="cnew"></a>
     <div id="formdiv">
         <form action="#cnew" method="post">
-            <textarea name="commenttext_new" placeholder="发布评论注意遵守国家法律法规"></textarea>
-            <p><input type="submit" value="发表评论"></p>
+            <textarea id="commenttext" name="commenttext_new" placeholder="发布评论注意遵守国家法律法规"></textarea>
+            <p><input class="comsub" type="submit" value="发表评论"></p>
         </form>
     </div>
 </div>

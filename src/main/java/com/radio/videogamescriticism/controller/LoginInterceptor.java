@@ -32,7 +32,6 @@ public class LoginInterceptor implements HandlerInterceptor {
             System.out.println("没有登录");
             //直接重定向到登录页面
             //response.sendRedirect(request.getContextPath()+"/login");
-
             response.setHeader("Content-type", "text/html;charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write("<script>window.alert('对不起，请登录！')</script>");

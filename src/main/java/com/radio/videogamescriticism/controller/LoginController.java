@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LoginController {
     @Autowired
-    private VgcUserService vgcUserService;
+    private VgcUserService vgcuserService;
 
     @RequestMapping("/login")
     public String login(HttpServletRequest request, HttpServletResponse response) {
@@ -34,7 +34,7 @@ public class LoginController {
         String tpassword = request.getParameter("tpassword");
         System.out.println(tnumber);
         System.out.println(tpassword);
-        VgcUser user = vgcUserService.checkOne(tnumber, tpassword);
+        VgcUser user = vgcuserService.checkOne(tnumber, tpassword);
         System.out.println(user);
         return checkuser(user, request, response, tnumber, tpassword);
     }
@@ -53,19 +53,20 @@ public class LoginController {
         System.out.println("username:"+rnumber);
         System.out.println("password:"+rpassword);
 
-        VgcUser cherename = vgcUserService.renamecheck(rnumber);
+        VgcUser cherename = vgcuserService.renamecheck(rnumber);
         if (cherename !=null){
             System.out.println("重名");
             return 0;
         }
 
-        vgcUserService.insert(rnumber, rpassword, nickname);
+        vgcuserService.insert(rnumber, rpassword, nickname);
         System.out.println("外部注册用户："+nickname+"注册成功");
-        VgcUser user = vgcUserService.checkOne(rnumber, rpassword);
+        VgcUser user = vgcuserService.checkOne(rnumber, rpassword);
         System.out.println("外部注册用户："+nickname+"登录检查");
         return checkuser(user, request, response, rnumber, rpassword);
     }
 
+    //登出
     @RequestMapping(value = "/loginout")
     public String loginout(HttpServletRequest request) {
         System.out.println("登出操作");

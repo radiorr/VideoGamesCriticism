@@ -172,6 +172,7 @@ $(document).ready(function() {
 					.ajax({
 						type: 'post',
 						url: 'usercheck',
+                        responseTime: 1000,
 						data: {
                             tnumber: tnumber,
                             tpassword: tpassword
@@ -214,7 +215,7 @@ $(document).ready(function() {
 											});
 
 								}
-                                window.location.href = '/'
+                                window.location.href = '/';
 							} else {
 
 								$("#rightbox")

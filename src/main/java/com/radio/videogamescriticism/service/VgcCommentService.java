@@ -11,6 +11,6 @@ public interface VgcCommentService {
 
      List<VgcComment> getcomment(int game_id);
 
-     void insertcomment(int user_id, String game_comment);
+     void insertcomment(String user_id, String game_id, String game_comment);
 
 }

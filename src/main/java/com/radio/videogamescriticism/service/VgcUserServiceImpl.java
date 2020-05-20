@@ -48,4 +48,11 @@ public class VgcUserServiceImpl implements VgcUserService{
     public String getPassword(String username){
         return vgcusermapper.getPassword(username);
     };
+
+    @Override
+    public String getuserid(String username) {
+        return vgcusermapper.getuserid(username);
+    }
+
+    ;
 }

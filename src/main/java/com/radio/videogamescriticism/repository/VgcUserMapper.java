@@ -2,8 +2,10 @@ package com.radio.videogamescriticism.repository;
 
 
 import com.radio.videogamescriticism.domain.VgcUser;
-import org.apache.ibatis.annotations.*;
-
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -35,6 +37,9 @@ public interface VgcUserMapper {
 
     @Select("SELECT password FROM vgc_user WHERE username = #{username}")
     public String getPassword(String username);
+
+    @Select("SELECT user_id FROM vgc_user WHERE binary username = #{username}")
+    public String getuserid(String username);
 
 
 }

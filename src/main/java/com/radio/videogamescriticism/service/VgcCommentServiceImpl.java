@@ -20,9 +20,10 @@ public class VgcCommentServiceImpl implements VgcCommentService{
     public List<VgcComment> getcomment(int game_id){
         return vgccommentmapper.getcomment(game_id);
     };
+
     @Override
-    public void insertcomment(int user_id, String game_comment){
-         vgccommentmapper.insertcomment(user_id,game_comment);
+    public void insertcomment(String user_id, String game_id, String game_comment) {
+        vgccommentmapper.insertcomment(user_id, game_id, game_comment);
     };
 
 }
