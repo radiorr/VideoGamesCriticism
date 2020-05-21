@@ -36,4 +36,11 @@ public class VgcGameServiceImpl implements VgcGameService{
 
     ;
 
+    @Override
+    public List<VgcGame> gettaggame(String tag) {
+        return vgcgamemapper.gettaggame(tag);
+    }
+
+    ;
+
 }

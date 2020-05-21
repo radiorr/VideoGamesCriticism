@@ -1,4 +1,27 @@
 $(document).ready(function() {
+    $(".cleartag").click(function () {
+        $("#f_search").val('');
+    });
+    $(".tagsub").click(function () {
+        var tag = $("#f_search").val();
+        $.ajax({
+            url: "gettagGame",
+            type: "POST",
+            responseTime: 1000,
+            data: {
+                tag: tag
+            },
+            dataType: 'json',
+            cache: false,
+            success: function (result) {
+                if (result == 1) {
+                    window.location.reload();
+                }
+            }
+        });
+
+    });
+	
 	
 	$.ajax({
 			url: "getAllGame",
@@ -20,10 +43,7 @@ $(document).ready(function() {
 					}
 				}
 			}
-		}
-
-
-	);
+    });
 
 	function gameinfoTemplate(game) {
 

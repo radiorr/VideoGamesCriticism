@@ -16,4 +16,5 @@ public interface VgcGameService {
 
     List<VgcGame> getAllinfo();
 
+    List<VgcGame> gettaggame(String tag);
 }

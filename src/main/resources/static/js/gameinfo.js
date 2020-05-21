@@ -20,11 +20,13 @@ $(document).ready(function () {
                         com = cominfoTemplate(data[x]);
                         $("#cdiv").prepend(com);
                     }
+                    $(".noncom").hide();
 
                 } else {
 
                     com = nonconinfoTemplate();
                     $("#cdiv").prepend(com);
+                    $(".noncom").hide();
                 }
             }
         }
@@ -50,12 +52,10 @@ $(document).ready(function () {
             cache: false,
             success: function (result) {
                 if (result == 1) {
-                    $(".noncom").hide();
                     $("#chd").prepend(alertsuccess());
 
                     window.location.reload();
                 } else {
-                    $(".noncom").hide();
                     $("#chd").prepend(alertdanger());
 
                 }

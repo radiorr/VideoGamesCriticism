@@ -16,13 +16,13 @@
 		<div class="ido" style="max-width:1370px">
 			<div id="toppane">
 				<div id="searchbox" class="idi">
-					<form action="https://exhentai.org/" method="get" style="margin:0px; padding:0px"><input type="hidden" id="f_cats"
-						 name="f_cats" value="0" disabled="disabled">
-                        <p class="nopm"><input id="f_search" maxlength="200" name="f_search" placeholder="请输入关键词"
-                                               size="50"
-                                               type="text"><input onclick="search_presubmit()" type="submit" value="搜索"><input
-                                onclick=""
-                                type="button" value="清空"></p>
+                    <form method="get" style="margin:0px; padding:0px">
+                        <p class="nopm">
+                            <input id="f_search" maxlength="200" name="f_search" placeholder="请输入关键词" size="50"
+                                   type="text">
+                            <input class="tagsub" type="button" value="搜索">
+                            <input class="cleartag" type="button" value="清空">
+                        </p>
 						<div id="advdiv" style="display:none"></div>
 					</form>
 				</div>
@@ -30,7 +30,9 @@
 			</div>
 			<div style="position:relative; z-index:2">
 				<div class="itg gld">
-                    <div class="none"><p>加载中。。。</p></div>
+                    <div class="none">
+                        <p>加载中。。。</p>
+                    </div>
                 </div>
 			</div>
 		</div>

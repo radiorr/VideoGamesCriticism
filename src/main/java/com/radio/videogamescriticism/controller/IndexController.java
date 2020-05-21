@@ -18,7 +18,8 @@ public class IndexController{
     private VgcUserService vgcuserService;
     @Autowired
     private VgcGameService vgcgameService;
-
+    List<VgcGame> game;
+    List<VgcGame> taggame;
     @RequestMapping("/")
     public String login(HttpServletRequest request, HttpServletResponse response) {
 
@@ -35,15 +36,31 @@ public class IndexController{
     }
 
     @ResponseBody
-    @RequestMapping("/getAllGame")
-    public List<VgcGame> gameinfo(HttpServletRequest request, HttpServletResponse response) {
-        List<VgcGame> game = vgcgameService.getAllinfo();
-        System.out.println("游戏数据加载");
-        try {
-            Thread.currentThread().sleep(1 * 1000);
-        } catch (InterruptedException e) {
-        }
-        return game;
+    @RequestMapping("/gettagGame")
+    public int taggameinfo(HttpServletRequest request, HttpServletResponse response) {
+        String tag = request.getParameter("tag");
+        taggame = vgcgameService.gettaggame(tag);
+        return 1;
     }
 
+    @ResponseBody
+    @RequestMapping("/getAllGame")
+    public List<VgcGame> gameinfo(HttpServletRequest request, HttpServletResponse response) {
+
+        if (taggame == null) {
+            System.out.println("游戏数据加载");
+            game = vgcgameService.getAllinfo();
+            return game;
+        } else {
+            System.out.println("游戏数据加载2");
+            game = taggame;
+            taggame = null;
+            return game;
+        }
+        /*try {
+            Thread.currentThread().sleep(1 * 1000);
+        } catch (InterruptedException e) {
+        }*/
+
+    }
 }
