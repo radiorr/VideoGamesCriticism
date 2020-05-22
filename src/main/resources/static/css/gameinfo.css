@@ -6,8 +6,23 @@ a.comment {
     font-size: 15px;
 }
 
-.noncom, .nonecom {
+.noncom,
+.nonecom {
     font-size: 25px;
     text-align: center;
     padding: 10%;
+}
+
+.center-block {
+    width: 84px;
+    height: 84px;
+    background: #363636;
+    border: 4px solid #000000;
+    margin-top: 6px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.ratingbox {
+    margin-right: -21px;
 }

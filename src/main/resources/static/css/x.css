@@ -1,7 +1,7 @@
 body {
 	font-size: 8pt;
 	font-family: arial, helvetica, sans-serif;
-	color: #f1f1f1;
+    color: #f1f1f1 !important;
 	background: #34353b !important;
 	padding: 2px;
 	margin: 0;
@@ -2146,6 +2146,11 @@ div#spa img {
 }
 
 @media screen and (max-width:1230px) {
+
+    .upform {
+        margin: 5% 35% !important;
+    }
+	
 	div#gd1 {
 		display: none !important
 	}
@@ -2168,6 +2173,11 @@ div#spa img {
 }
 
 @media screen and (max-width:990px) {
+
+    .upform {
+        margin: 5% 30% !important;
+    }
+	
 	p.gpc {
 		margin-top: 25px;
 		visibility: hidden !important
@@ -2744,4 +2754,19 @@ table.game_language_options {
     text-align: center;
     padding: 25%;
     color: #f1f1f1;
+}
+
+.table {
+    color: #f1f1f1 !important;
+}
+
+.form-control {
+    background-color: #34353b !important;
+}
+
+.upform {
+    border: 2px ridge #3c3c3c;
+    margin: 5% 35%;
+    padding: 1% 2%;
+    width: 280px;
 }

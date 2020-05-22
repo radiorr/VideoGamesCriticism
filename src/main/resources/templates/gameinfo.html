@@ -34,21 +34,27 @@
         <div class="mbt5">
 
             <div class="f20 fb" style="margin-top:5px;margin-bottom:15px;margin-left: 50px;">游戏评分</div>
-            <div class="center-block"
-                 style="width: 84px;height: 84px;background: #363636;border: 4px solid #000000;margin-top: 6px;margin-left: 30px;">
+            <div class="center-block">
                 <div class="text-center"
                      style=" line-height: 80px;  font-size: 40px; font-weight: bold; box-sizing: inherit;"
                      th:text="*{sumgrade}">
                     N/A
                 </div>
             </div>
-            <div></div>
+            <div class="ratingbox">
+                <form>
+                    <input class="rating" data-max=5 data-min=0 data-size="lg" data-step=0.5 id="input-21b" required
+                           title="" type="text"
+                           value="4">
+                </form>
+            </div>
+            <input class="grasub" style="margin-left: 45%;" type="submit" value="提交">
         </div>
     </div>
     <div id="gmid">
         <div id="gd3">
             <div id="gdc">
-							<div class="cs ct2" onclick=" " th:text="*{game_group}"></div>
+                <div class="cs ct2" onclick=" " th:text="*{game_group}"></div>
             </div>
             <div id="gdd">
                 <table style="margin-left: 30px;">

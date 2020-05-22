@@ -1,16 +1,48 @@
 $(document).ready(function() {
+    $.ajax({
+        url: "getgra",
+        responseTime: 1000,
+        dataType: 'json',
+        success: function (data) {
+            var com = "";
 
-	/* $(".pttdiv").append(
-		"<ul class='pagination ptt' style='margin: 0px auto 0px;'>" +
-		"<li><a href='#'>&laquo;</a></li>" +
-		"<li class='active'><a href='#'>1</a></li>" +
-		"<li><a href='#'>2</a></li>" +
-		"<li><a href='#'>3</a></li>" +
-		"<li><a href='#'>4</a></li>" +
-		"<li><a href='#'>5</a></li>" +
-		"<li><a href='#'>6</a></li>" +
-		"<li><a href='#'>7</a></li>" +
-		"<li><a href='#'>&raquo;</a></li>" +
-		"</ul>"
-	); */
+            if (data) {
+                if (data.length > 0) {
+                    game_id = data[0].game_id;
+                    for (x in data) {
+                        com = graTemplate(data[x]);
+                        $("#cdiv").prepend(com);
+                    }
+                    $(".noncom").hide();
+
+                } else {
+
+                    com = graTemplate();
+                    $("#cdiv").prepend(com);
+                    $(".noncom").hide();
+                }
+            }
+        }
+    });
+
+    function graTemplate(comment) {
+        return "<div class='c1'>" +
+            "<div class='c2'>" +
+            "<div class='c3'>" + comment.com_time + " &nbsp; " + comment.nickname + "</div>" +
+            "<div class='c4 nosel'><a name='ulcomment'></a></div>" +
+            "<div class='c'></div>" +
+            "</div>" +
+            "<div class='c6'>" + comment.game_comment + "</div>" +
+            "<div class='c7' style='display:none'></div>" +
+            "</div>";
+    }
+
+
+    function nonconinfoTemplate() {
+        return "<div class='nonecom'>暂无评论" +
+            "</div>";
+    }
+	
+	
+	
 });

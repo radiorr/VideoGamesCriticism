@@ -12,30 +12,58 @@
     <script src="/jquery.cookie.js"></script>
 <body id="top">
 
-<div class="ido" style="max-width:1370px">
-    <div id="toppane">
-        <div class="idi" id="searchbox">
+<div class="gm">
+    <div class="upform">
+        <form role="form">
+            <div class="form-group">
+                <label for="nickname">昵称</label><label class="rtext" for="nickname">
 
-        </div>
-        <div class="idi" id="fsdiv" style="margin-top:10px; display:none"></div>
-    </div>
-    <div style="position:relative; z-index:2">
-        <div class="itg gld">
-            <div class="gm" id="cdiv"><a name="c0"></a>
-                <div id="chd">
-                    <p id="postnewcomment">
-                        [<a class="comment" href="#formdiv">发起新评论</a>]
-                    </p>
-                </div>
-                <a name="cnew"></a>
-                <div id="formdiv">
-                    <form action="#cnew" method="post">
-                        <textarea name="commenttext_new" placeholder="发布评论注意遵守国家法律法规"></textarea>
-                        <p><input type="submit" value="发表评论"></p>
-                    </form>
+            </label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+								<span class="input-group-text"> <span aria-hidden="true" class="icon-pencil"></span>
+								</span>
+                    </div>
+                    <input autocomplete="off" class="form-control" id="nickname" name="nickname" placeholder="请输入新昵称"
+                           type="text"/>
                 </div>
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="rpassword">密码</label><label class="rtext" for="rpassword">
+            </label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+								<span class="input-group-text"> <span aria-hidden="true" class="icon-key"></span>
+								</span>
+                    </div>
+                    <input autocomplete="off" class="form-control" id="rpassword" name="rpassword" placeholder="请输入新密码"
+                           type="password"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rpassword2">确认密码</label><label class="rtext" for="rpassword2">
+                <p></p>
+            </label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+								<span class="input-group-text"> <span aria-hidden="true" class="icon-key"></span>
+								</span>
+                    </div>
+                    <input autocomplete="off" class="form-control" id="rpassword2" name="rpassword2"
+                           placeholder="请再次输入新密码"
+                           type="password"/>
+                </div>
+            </div>
+            <div class="check-box">
+                <label class="text-danger"> <b class="rerrbox"></b>
+                </label> <label class="text-success"> <b class="rightbox"></b>
+            </label>
+            </div>
+            <div class="but-up ">
+                <input class="grasub" type="submit" value="提交修改">
+            </div>
+        </form>
     </div>
 </div>
 <div class="sel-text-win" id="sel-ext-win" style="display: none;"></div>

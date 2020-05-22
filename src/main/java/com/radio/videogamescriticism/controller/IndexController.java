@@ -28,13 +28,6 @@ public class IndexController{
         return "index";
     }
 
-    @RequestMapping("/demo2")
-    public String demo(HttpServletRequest request, HttpServletResponse response) {
-
-
-        return "demo2";
-    }
-
     @ResponseBody
     @RequestMapping("/gettagGame")
     public int taggameinfo(HttpServletRequest request, HttpServletResponse response) {
